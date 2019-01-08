@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical">
+
+
+    <com.mxn.soul.flowingdrawer_core.FlowingDrawer
+
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:edMenuBackground="#dddddd"
+        app:edMenuSize="260dp"
+        app:edPosition="1">
+
+        <!--content-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/toolbarContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:elevation="6dp"
+                android:minHeight="?attr/actionBarSize">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorPrimary"
+                    android:elevation="6dp"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <ImageButton
+                        android:id="@+id/showSideNavigationButton"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/menu"
+                        android:tint="@color/colorPrimaryDark"/>
+
+                    <ImageView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/text_logo"/>
+                </android.support.v7.widget.Toolbar>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/toolbar"/>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.daimajia.slider.library.SliderLayout
+                            android:id="@+id/promotionImageSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="12.3dp"
+                            android:layout_marginTop="29.7dp"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="오늘의 메뉴!"
+                                android:textColor="#373737"
+                                android:textSize="19.3sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="See all"
+                                android:textColor="#a5a5a5"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/mealRecyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:divider="#fff"
+                            android:dividerHeight="0dp"
+                            android:paddingLeft="24.3dp"
+                            android:paddingTop="17.7dp"
+                            android:scrollbars="none"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="12.3dp"
+                            android:layout_marginTop="44.7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="무슨일있나"
+                                android:textColor="#373737"
+                                android:textSize="19.3sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="See all"
+                                android:textColor="#a5a5a5"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/schoolScheduleRecyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:divider="#fff"
+                            android:dividerHeight="0dp"
+                            android:paddingLeft="24.3dp"
+                            android:paddingTop="17.7dp"
+                            android:scrollbars="none"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="12.3dp"
+                            android:layout_marginTop="44.7dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="오늘의 시간표"
+                                android:textColor="#373737"
+                                android:textSize="19.3sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="See more"
+                                android:textColor="#a5a5a5"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/timeTableRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:divider="#fff"
+                            android:dividerHeight="0dp"
+                            android:paddingLeft="24.3dp"
+                            android:paddingTop="17.7dp"
+                            android:scrollbars="none"/>
+
+                    </LinearLayout>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="188.3dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="34.3dp"
+                        android:layout_marginTop="39.7dp"
+                        android:clipToPadding="false"
+                        android:paddingLeft="23.7dp"
+                        android:paddingRight="22.3dp"/>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <!--menu-->
+        <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+            android:id="@+id/menulayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/container_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+
+    </com.mxn.soul.flowingdrawer_core.FlowingDrawer>
+
+
+</FrameLayout>

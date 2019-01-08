@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="19.7dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="207.3dp"
+            android:layout_height="140dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/thumbnailImageView"
+            app:riv_corner_radius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/event_background"/>
+
+
+            <TextView
+                android:id="@+id/scheduleContentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="13dp"
+                android:maxLength="17"
+                android:singleLine="true"
+                android:text="some evet goes here"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/scheduleDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:text="Parata"
+            android:textSize="16.7sp"
+            android:layout_marginTop="13dp"
+            android:textColor="#373737"/>
+
+
+        <TextView
+            android:id="@+id/captionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Punjabi"
+            android:textSize="12.7sp"
+            android:maxLength="40"
+            android:layout_marginTop="11.7dp"
+            android:textColor="#a5a5a5"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
